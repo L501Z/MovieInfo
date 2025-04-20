@@ -1,0 +1,70 @@
+TESTING MODULE FOR API
+
+Vitest 
+
+Functional Tests
+
+Validation Tests
+    Tests validation for search querys and parameters in requests
+
+home.test.js - "/api/v2/":
+    Tests the home route of the api to check if the response is consistency correct
+    Tests the home route to handle multiple requests at the same time 
+
+Sizes Route - "/api/v2/dbsizes":
+    Tests the sizes route to see if the results are consistency correct
+    Tests the 'databaseSize' function within the controller to see if data is transfered correctly
+    Tests the 'returnDatabaseSizes' function within the services to see if the correct result is produced from storage
+
+Search Route - "/api/v2/dbsearch"
+    Tests the route for exact matches 
+    Tests the route for partial matches 
+    Tests the route for different layers of search e.g collection, database, document
+    Tests the route for field matches 
+    Tests the route for sorting results
+    Tests the route for filtering results
+    Tests the 'dbSearch' function within controller
+    Tests the 'searchDb' function within services
+
+Collection Route - "/api/v2/:data/:collection"
+    Tests the route for matching collections from the database
+    Tests for consistency of results
+    Tests 'getCollectionDocs' function within controller
+    Tests 'getAllDocs' within services 
+
+Collection Names Routes - "api/v2/getCollectionNames"
+    Tests the route against known correct values to make sure data is transfered and formatted correctly
+    Tests query parameters
+    Tests 'getCollectionNames' within controller
+    Tests 'getColNames' within services
+
+All fields - "/api/v2/allFields"
+    Tests for consistency of results
+    Tests for searching 
+    Tests for sorting
+    Tests for filtering
+    Tests 'getFieldNames' within controller 
+    Tests 'getAllFieldNames' within services
+
+Collection Fields - "/api/v2/:db/:collection/:field"
+    Tests for correct resutls and consistency
+    Tests for searching 
+    Tests for sorting
+    Tests for filtering
+    Tests 'getAllField' within controller
+    Tests 'returnAllInField' within services
+
+Image Tests - "/api/v2/image"
+    Tests lossless conversion
+    Tests for consistency
+
+Integration Tests 
+    Tests 'defineDatabases' - To check whether each variables contents is correct and consistent for each database iteration
+    Tests 'addCollectionsToMap' - To check whether each variables contents is correct and consistent for each collection iteration
+    Tests 'loadCollectionDocuments' - To check whether each variables contents is correct and consistent for each document/field iteration
+    Tests 'getCollectionNames' - To check whether each variables contents is correct and consistent for each database iteration
+    Tests 'getDatabaseNames' - To check whether each variables contents is correct and consistent for each result
+    Tests 'setDatabaseSizes' - To check whether each variables contents is correct and consistent for each database iteration
+    Tests 'setAllFieldNames' - To check whether each variables contents is correct and consistent for each field iteration
+    Tests 'setPixelArrays' - To check whether each variables contents is correct and consistent for each array
+    Tests 'initialiseDatabaseSearch' - To check search, sorting and filtering functions

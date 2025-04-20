@@ -1,0 +1,32 @@
+{
+  "name": "traffic_application",
+  "version": "1.1.0",
+  "description": "",
+  "homepage": "https://github.com/L501Z/traffic_module#readme",
+  "bugs": {
+    "url": "https://github.com/L501Z/traffic_module/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/L501Z/traffic_module.git"
+  },
+  "license": "ISC",
+  "author": "Luca",
+  "type": "module",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "mongodb": "^6.15.0",
+    "msw": "^2.7.4",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "vitest": "^3.1.1"
+  }
+}
